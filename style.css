@@ -1,0 +1,207 @@
+body {
+    
+    background-color: #95A5A6;
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 40px 0;
+}
+
+.container.gallery-container {
+    background-color: #E6E6FA;
+    color: #35373a;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    border:3px solid #2C3E50;
+    padding:25px;
+    border-radius:15px;
+    font-size: 50px;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+}
+h1:before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    background: #00ffb4;
+    width: 4px;
+    height: 120%;
+    padding: 0px;
+    z-index: -1;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+h1:hover:before {
+    background: #4e4e4e;
+    transform: translateX(2250%) scaleX(50) scaleY(0.2);
+  }
+h1:hover {
+    color: #00ffb4;
+    background-color:#95A5A6;
+  }
+@keyframes glitchin {
+    100% {
+      transform: translate(0px, 0px);
+    }
+    95% {
+      -webkit-transform: translate(0.5px, 0.05px);
+      transform: translate(0.5px, 0.05px);
+    }
+    90% {
+      -webkit-transform: translate(0.6px, -0.3px);
+      transform: translate(0.6px, -0.3px);
+    }
+    85% {
+      -webkit-transform: translate(1.2px, 0px);
+      transform: translate(1.2px, 0px);
+    }
+    80% {
+      -webkit-transform: translate(1.2px, 0.2px);
+      transform: translate(1.2px, 0.2px);
+    }
+    75% {
+      -webkit-transform: translate(0.5px, 1px);
+      transform: translate(0.5px, 1px);
+    }
+    70% {
+      -webkit-transform: translate(0.3px, 1.2px);
+      transform: translate(0.3px, 1.2px);
+    }
+    65% {
+      -webkit-transform: translate(-2.1px, 0.7px);
+      transform: translate(-2.1px, 0.7px);
+    }
+    60% {
+      -webkit-transform: translate(3.6px, 0.4px);
+      transform: translate(3.6px, 0.4px);
+    }
+    55% {
+      -webkit-transform: translate(0.45px, 1.8px);
+      transform: translate(0.45px, 1.8px);
+    }
+    50% {
+      -webkit-transform: translate(-3px, -1px);
+      transform: translate(-3px, -1px);
+    }
+    45% {
+      -webkit-transform: translate(-4.4px, 1.1px);
+      transform: translate(-4.4px, 1.1px);
+    }
+    40% {
+      -webkit-transform: translate(-4.2px, 2.4px);
+      transform: translate(-4.2px, 2.4px);
+    }
+    35% {
+      -webkit-transform: translate(2.6px, 1.3px);
+      transform: translate(2.6px, 1.3px);
+    }
+    30% {
+      -webkit-transform: translate(-1.4px, 2.8px);
+      transform: translate(-1.4px, 2.8px);
+    }
+    25% {
+      -webkit-transform: translate(6px, 0.75px);
+      transform: translate(6px, 0.75px);
+    }
+    20% {
+      -webkit-transform: translate(0px, -1.6px);
+      transform: translate(0px, -1.6px);
+    }
+    15% {
+      -webkit-transform: translate(-5.95px, -0.85px);
+      transform: translate(-5.95px, -0.85px);
+    }
+    10% {
+      -webkit-transform: translate(3.6px, 3.6px);
+      transform: translate(3.6px, 3.6px);
+    }
+    5% {
+      -webkit-transform: translate(-0.95px, -0.95px);
+      transform: translate(-0.95px, -0.95px);
+    }
+}
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 25px auto;
+    color: #8B0000;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 2px;
+
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(46, 132, 206, 0.7);
+    content: '';
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 1;
+    transition:linear 0.3s ease-in;
+
+    
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
